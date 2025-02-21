@@ -1,0 +1,33 @@
+{% extends "pages/base.html" %}
+{% load static %}
+{% block content %}
+    <div class="dashboard-wrapper">
+        <h2 class="section-title">Dashboard</h2>
+
+        <div class="dashboard-grid">
+            <div class="dashboard-card">
+                <div class="dashboard-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <p class="dashboard-title">Users</p>
+                <p class="dashboard-value">150</p>
+            </div>
+
+            <div class="dashboard-card">
+                <div class="dashboard-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <p class="dashboard-title">Orders</p>
+                <p class="dashboard-value">320</p>
+            </div>
+
+            <div class="dashboard-card">
+                <div class="dashboard-icon">
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+                <p class="dashboard-title">Revenue</p>
+                <p class="dashboard-value">$12,450</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

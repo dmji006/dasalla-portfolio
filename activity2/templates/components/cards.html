@@ -1,0 +1,8 @@
+{% load custom_filters %}  <!-- Load the custom filter file -->
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">{{ item.title }}</h5>
+        <p class="card-text">{{ item.count|currency }}</p>  <!-- Apply custom filter -->
+    </div>
+</div>

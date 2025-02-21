@@ -1,0 +1,36 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+
+{% block title %}Settings{% endblock %}
+
+{% block content %}
+    <div class="settings-wrapper">
+        <h2 class="section-title">Settings</h2>
+        
+        <div class="settings-grid">
+            <div class="settings-card">
+                <div class="settings-icon">
+                    <i class="fas fa-user-cog"></i>
+                </div>
+                <p class="settings-title">User Preferences</p>
+                <button class="settings-btn">Manage</button>
+            </div>
+
+            <div class="settings-card">
+                <div class="settings-icon">
+                    <i class="fas fa-bell"></i>
+                </div>
+                <p class="settings-title">Notifications</p>
+                <button class="settings-btn">Customize</button>
+            </div>
+
+            <div class="settings-card">
+                <div class="settings-icon">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <p class="settings-title">Security</p>
+                <button class="settings-btn">Update</button>
+            </div>
+        </div>
+    </div>
+{% endblock %}
