@@ -1,8 +1,7 @@
-"""
-URL configuration for myproj project.
+"""activity5 URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/5.1/topics/http/urls/
+    https://docs.djangoproject.com/en/3.2/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -18,11 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework_simplejwt.views import TokenRefreshView
-from portfolio.views import ProtectedView
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("portfolio/", include("portfolio.urls", namespace="portfolio")),
-    path("token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
-    path("api/protected/", ProtectedView.as_view(), name="protected"),
+    path("api/auth/", include("auth_app.urls")),
+    path("api/token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
 ]
